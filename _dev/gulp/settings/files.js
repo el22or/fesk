@@ -46,15 +46,5 @@ module.exports = {
       settings.path.tmp.fonts + '/**/*.woff',
       settings.path.tmp.fonts + '/**/*.woff2'
     ]
-  },
-
-  pattern_lab: {
-    css: [settings.path.pattern_lab.css + '/**/*.css'],
-    sass: [settings.path.pattern_lab.sass + '/**/*.scss'],
-    patterns: {
-      css: [settings.path.pattern_lab.patterns + '/**/*.css'],
-      sass: [settings.path.pattern_lab.patterns + '/**/*.scss'],
-      js: [settings.path.pattern_lab.patterns + '/**/*.js']
-    }
   }
 };

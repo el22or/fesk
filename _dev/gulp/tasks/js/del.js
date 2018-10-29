@@ -12,8 +12,6 @@ module.exports = function (gulp, plugins, settings, handlers) {
       if (err) return cb(err);
       del([
         settings.path.theme.js + '/*',
-        settings.path.theme.templates + '/**/*.js',
-        settings.path.theme.templates + '/**/*.js.*'
       ], {
         force: true
       });

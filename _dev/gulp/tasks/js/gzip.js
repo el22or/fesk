@@ -19,15 +19,4 @@ module.exports = function (gulp, plugins, settings, handlers) {
       .pipe(plugins.gzip())
       .pipe(gulp.dest(settings.path.theme.js));
   });
-
-  gulp.task('js:gzip:components', function (cb) {
-    if (settings.debug) {
-      console.log('js:gzip:components task...');
-    }
-
-    return gulp.src(settings.path.theme.templates + '/**/*.js')
-      .pipe(plugins.plumber({errorHandler: handlers.error}))
-      .pipe(plugins.gzip())
-      .pipe(gulp.dest(settings.path.theme.templates));
-  });
 };

@@ -14,11 +14,9 @@ module.exports = function (gulp, plugins, settings, handlers) {
       'svg:min',               // Minify SVG before use it in CSS.
       [
         'sass:global',         // Compile global Sass files with Sass.
-        'sass:components'      // Compile components Sass files with Sass.
       ],
       [
         'css:global',          // Compile global CSS files with PostCSS.
-        'css:components'       // Compile components CSS files with PostCSS.
       ],
       cb
     );
@@ -35,11 +33,9 @@ module.exports = function (gulp, plugins, settings, handlers) {
       'svg:min',             // Minify SVG before use it in CSS.
       [
         'sass:global',       // Compile global Sass files with Sass.
-        'sass:components'    // Compile components Sass files with Sass.
       ],
       [
         'css:global',        // Compile global CSS files with PostCSS.
-        'css:components'     // Compile global CSS files with PostCSS.
       ],
       'css:minify',          // Minify CSS.
       'css:gzip',            // Make .css.gz files (browser search for them automatically).

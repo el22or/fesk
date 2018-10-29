@@ -45,22 +45,17 @@
     "vinyl-buffer": "^1.0.0"
   },
   "scripts": {
-    "build": "npm-run-all build:svg build:css build:font build:js pattern-lab:css pattern-lab:twig build:notify",
+    "build": "npm-run-all build:svg build:css build:font build:js build:notify",
     "build:css": "gulp build:css:development",
     "build:js": "gulp build:js:development",
     "build:svg": "gulp svg:sprite",
     "build:font": "gulp font:webfontloader:recreate",
     "build:notify": "gulp notifications:build",
-    "build:pattern-lab": "npm-run-all pattern-lab:css pattern-lab:twig",
     "build:production": "npm-run-all build:production:css build:production:js cleanup:tmp build:notify",
     "build:production:css": "gulp build:css:production",
     "build:production:js": "gulp build:js:production",
-    "pattern-lab:css": "gulp pattern-lab:sass",
-    "pattern-lab:twig": "php pattern-lab/core/console --generate",
-    "server:pattern-lab": "php pattern-lab/core/console --server",
     "cleanup": "npm-run-all cleanup:*",
     "cleanup:assets": "gulp build:del:assets",
-    "cleanup:templates": "gulp build:del:templates",
     "cleanup:tmp": "gulp build:del:tmp",
     "watch": "gulp watch"
   }

@@ -28,21 +28,4 @@ module.exports = function (gulp, plugins, settings, handlers) {
       }))
       .pipe(gulp.dest(settings.path.theme.css));
   });
-
-  gulp.task('css:minify:components', function (cb) {
-    if (settings.debug) {
-      console.log('css:minify:components task...');
-    }
-
-    return gulp.src(settings.files.pattern_lab.patterns.css)
-      .pipe(plugins.plumber({errorHandler: handlers.error}))
-      .pipe(plugins.postcss([
-        autoprefixer,
-        minify
-      ]))
-      .pipe(plugins.rename({
-        suffix: '.min'
-      }))
-      .pipe(gulp.dest(settings.path.theme.templates));
-  });
 };

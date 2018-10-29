@@ -13,7 +13,6 @@ module.exports = function (gulp, plugins, settings, handlers) {
       'js:del',               // Remove all JS files.
       [
         'js:minify',          // Compile global JS files.
-        'js:components'       // Compile components JS files.
       ],
       cb
     );
@@ -29,7 +28,6 @@ module.exports = function (gulp, plugins, settings, handlers) {
       'js:del',              // Remove all JS files.
       [
         'js:minify',         // Compile global JS files.
-        'js:components'      // Compile components JS files.
       ],
       'js:gzip',             // Make .js.gz files (browser search for them automatically).
       cb

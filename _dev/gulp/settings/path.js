@@ -40,11 +40,5 @@ module.exports = {
     js: path.resolve(rootPath.theme, './assets/scripts'),
     svg: path.resolve(rootPath.theme, './assets/images/svg'),
     templates: path.resolve(rootPath.theme, './templates')
-  },
-  pattern_lab: {
-    _self: path.resolve(rootPath.pattern_lab, './'),
-    sass: path.resolve(rootPath.pattern_lab, './source/sass'),
-    css: path.resolve(rootPath.pattern_lab, './source/css'),
-    patterns: path.resolve(rootPath.pattern_lab, './source/_patterns')
   }
 };

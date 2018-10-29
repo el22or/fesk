@@ -13,8 +13,6 @@ module.exports = function (gulp, plugins, settings, handlers) {
       del([
         settings.path.dev.css + '/*',
         settings.path.theme.css + '/*',
-        settings.path.theme.templates + '/**/*.css',
-        settings.path.theme.templates + '/**/*.css.*'
       ], {
         force: true
       });

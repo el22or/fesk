@@ -48,7 +48,6 @@ getTask('build', 'css');           // $ gulp build:css:development; $ gulp build
 getTask('build', 'del');           // $ gulp build:del; $ gulp build:del:tmp; $ gulp build:del:assets
 getTask('build', 'js');            // $ gulp build:js:development; $ gulp build:js:production
 // CSS
-getTask('css', 'components');      // $ gulp css:components
 getTask('css', 'del');             // $ gulp css:del
 getTask('css', 'global');          // $ gulp css:global
 getTask('css', 'gzip');            // $ gulp css:gzip
@@ -58,18 +57,13 @@ getTask('font', 'webfontloader');  // $ gulp font:webfontloader:copy; $ gulp fon
 // Images
 getTask('img', 'sprite');          // $ gulp img:sprite
 // JS
-getTask('js', 'components');       // $ gulp js:components
 getTask('js', 'del');              // $ gulp js:del
 getTask('js', 'gzip');             // $ gulp js:gzip; $ gulp js:gzip:global; $ gulp js:gzip:components
 getTask('js', 'load');             // $ gulp js:load
 getTask('js', 'minify');           // $ gulp js:minify
-getTask('js', 'wrap');             // $ gulp js:wrap
 // Notifications
 getTask('notifications', 'build'); // $ gulp notifications:build
-// Pattern Lab
-getTask('pattern-lab', 'sass');    // $ gulp pattern-lab:sass
 // SASS
-getTask('sass', 'components');     // $ gulp sass:components
 getTask('sass', 'global');         // $ gulp sass:global
 // SVG
 getTask('svg', 'del');             // $ gulp svg:del
@@ -85,14 +79,11 @@ gulp.task('watch', function (cb) {
   gulp.watch([
     settings.files.dev.scss,
     settings.files.dev.css,
-    settings.files.pattern_lab.patterns.sass,
-    settings.files.pattern_lab.patterns.css
   ], ['build:css:development']);
 
   // Watch JS files (global and components).
   gulp.watch([
     settings.files.dev.js,
-    settings.files.pattern_lab.patterns.js
   ], ['build:js:development']);
 });
 
